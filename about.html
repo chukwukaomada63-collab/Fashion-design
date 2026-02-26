@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Elegant Designs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover {
+            color: #c9a961;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .about-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            font-weight: 600;
+            border-bottom: 3px solid #c9a961;
+            padding-bottom: 0.5rem;
+        }
+
+        .about-section p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .mission-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #c9a961;
+        }
+
+        .mission-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .mission-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .team-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #1a1a1a;
+            font-weight: 600;
+            border-bottom: 3px solid #c9a961;
+            padding-bottom: 0.5rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 2rem;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .member-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .team-member h3 {
+            font-size: 1.3rem;
+            color: #1a1a1a;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #c9a961;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .about-section {
+                padding: 1.5rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Elegant Designs</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>About Elegant Designs</h1>
+        <p>Discover the story behind our passion for fashion</p>
+    </div>
+
+    <div class="container">
+        <div class="about-section">
+            <h2>Our Story</h2>
+            <p>Founded in 1998, Elegant Designs emerged from a passion for creating timeless fashion pieces that celebrate individuality and elegance. What started as a small atelier has evolved into a renowned fashion house known for exceptional craftsmanship and innovative designs.</p>
+            <p>Our journey has been defined by a commitment to quality, innovation, and customer satisfaction. We believe that fashion should be both beautiful and meaningful, creating pieces that our clients will treasure for years to come.</p>
+        </div>
+
+        <div class="mission-vision">
+            <div class="mission-card">
+                <h3>Our Mission</h3>
+                <p>To create exquisite, personalized fashion that empowers our clients to express their unique identity and feel confident in every occasion.</p>
+            </div>
+            <div class="mission-card">
+                <h3>Our Vision</h3>
+                <p>To be the leading luxury fashion house known for exceptional design, impeccable craftsmanship, and unparalleled customer experience.</p>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>Why Choose Us</h2>
+            <p><strong>Expert Craftsmanship:</strong> Our designs are created by experienced artisans using time-honored techniques combined with modern innovation.</p>
+            <p><strong>Premium Materials:</strong> We source only the finest fabrics and materials from around the world to ensure uncompromising quality.</p>
+            <p><strong>Personalized Service:</strong> Each client receives dedicated attention and personalized consultation to create their perfect piece.</p>
+            <p><strong>Timeless Design:</strong> We create pieces that transcend trends, ensuring your investment in fashion pays dividends for years.</p>
+        </div>
+
+        <div class="team-section">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-icon">👩‍🎨</div>
+                    <h3>Emma Sterling</h3>
+                    <p>Creative Director & Founder - With 25+ years of experience in haute couture</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-icon">✨</div>
+                    <h3>Michael Chen</h3>
+                    <p>Head Designer - Specializing in evening wear and bridal collections</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-icon">🧵</div>
+                    <h3>Sofia Rossi</h3>
+                    <p>Master Tailor - Expert in custom tailoring and alterations</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-icon">🌹</div>
+                    <h3>Alexandra Park</h3>
+                    <p>Style Consultant - Guides clients in finding their perfect look</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Elegant Designs. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
